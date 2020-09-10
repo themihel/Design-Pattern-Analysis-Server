@@ -1,0 +1,37 @@
+version: '3'
+services:
+
+  web:
+    hostname: design-pattern-analysis-server.local
+
+    build:
+      context: .
+      dockerfile: .docker/web.dockerfile
+
+    image: design-pattern-analysis-server.local
+
+    ports:
+      - 80:80
+
+    volumes:
+      - .:/web
+
+    depends_on:
+      - db
+
+    links:
+      - db
+
+  db:
+    hostname: design-pattern-analysis-server.db
+
+    image: mysql:latest
+
+    ports:
+      - 13306:3306
+
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: design-pattern-analysis-server
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password

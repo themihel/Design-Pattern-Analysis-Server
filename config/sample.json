@@ -1,0 +1,15 @@
+{
+  "slim": {
+    "displayErrorDetails": true
+  },
+  "database": {
+    "driver": "mysql",
+    "host": "172.18.0.2",
+    "database": "design-pattern-analysis-server",
+    "username": "root",
+    "password": "password",
+    "charset": "utf8",
+    "collation": "utf8_unicode_ci",
+    "prefix": ""
+  }
+}

@@ -1,0 +1,8 @@
+/*
+ Add any styles you want to the tracked web app.
+*/
+
+/* For example: Decolorize images */
+img {
+    filter: grayscale(100%);
+}
